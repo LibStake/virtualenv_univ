@@ -3,7 +3,11 @@ guid: bd190a99d8b59f54b8a61fdf2c17628e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - mazeMat1: {instanceID: 0}
+  - mazeMat2: {instanceID: 0}
+  - startMat: {instanceID: 0}
+  - treasureMat: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
