@@ -1,5 +1,7 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class MazeConstructor : MonoBehaviour
 {
@@ -7,6 +9,9 @@ public class MazeConstructor : MonoBehaviour
     private MazeDataGenerator _dataGenerator;
     private MazeMeshGenerator _meshGenerator;
 
+    [SerializeField] private int numQuizRoom;
+    [SerializeField] private float mazeCellWidth;
+    [SerializeField] private float mazeCellHeight;
     [SerializeField] private Material mazeMat1;
     [SerializeField] private Material mazeMat2;
     [SerializeField] private Material startMat;
@@ -20,7 +25,7 @@ public class MazeConstructor : MonoBehaviour
 
     private void Awake()
     {
-        // _meshGenerator = new MazeMeshGenerator();
+        _meshGenerator = new MazeMeshGenerator(mazeCellWidth, mazeCellHeight);
         _dataGenerator = new MazeDataGenerator();
         Data = new int[,]
         {
@@ -37,7 +42,7 @@ public class MazeConstructor : MonoBehaviour
             Debug.LogError("Odd numbers work better for maze generation.");
         }
 
-        Data = _dataGenerator.FromDimensions(sizeRows, sizeCols);
+        Data = _dataGenerator.FromDimensions(sizeRows, sizeCols, numQuizRoom + 1);
         DisplayMaze();
     }
 
@@ -57,7 +62,7 @@ public class MazeConstructor : MonoBehaviour
         MeshRenderer mr = go.AddComponent<MeshRenderer>();
         mr.materials = new Material[2] {mazeMat1, mazeMat2};
     }
-
+    
     private void OnGUI()
     {
         if (!showDebug) return;
@@ -83,6 +88,10 @@ public class MazeConstructor : MonoBehaviour
                 else if (maze[i, j] == 3)
                 {
                     msg += "++";
+                }
+                else if (maze[i, j] == 4)
+                {
+                    msg += "[  ]";
                 }
                 else
                 {
