@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b74610e-9f7a-4878-9723-ff36f0a39359" name="Default Changelist" comment="" />
+    <list default="true" id="5b74610e-9f7a-4878-9723-ff36f0a39359" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.virtualenv_univ/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.virtualenv_univ/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.virtualenv_univ/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.virtualenv_univ/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.virtualenv_univ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.virtualenv_univ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,6 +103,8 @@
       <updated>1607008598388</updated>
       <workItem from="1607008606446" duration="11203000" />
       <workItem from="1607064544043" duration="3422000" />
+      <workItem from="1607073264899" duration="110000" />
+      <workItem from="1607073619574" duration="700000" />
     </task>
     <servers />
   </component>
