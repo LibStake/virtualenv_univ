@@ -11,7 +11,7 @@ public class TeleportGenerator : MonoBehaviour
 {
     public bool showDebug;
     public GameObject teleportPillarPrefab;
-    private List<Vector4> quizeRoomVectors;
+    private List<Vector4> quizRoomVectors;
     public TeleportGenerator()
     {
     }
@@ -31,9 +31,9 @@ public class TeleportGenerator : MonoBehaviour
                 if (maze[i, j] == 4)
                 {
                     mazeTeleportVectors.Add(new Vector4(
-                        cellWidth * (0.5f + i),
+                        cellWidth * (0.5f + (float)i),
                         0f,
-                        cellWidth * (0.5f + i),
+                        cellWidth * (0.5f + (float)i),
                         _resolveDirection(maze, i, j)
                         ));
                 }
@@ -49,8 +49,8 @@ public class TeleportGenerator : MonoBehaviour
             GameObject mazePillar = Instantiate(teleportPillarPrefab, posMaze, rotMaze);
 
             // Gen teleporter for room
-            Vector3 posRoom = new Vector3(quizeRoomVectors[i].x, quizeRoomVectors[i].y, quizeRoomVectors[i].z);
-            Quaternion rotRoom = Quaternion.Euler(0, quizeRoomVectors[i].w, 0);
+            Vector3 posRoom = new Vector3(quizRoomVectors[i].x, quizRoomVectors[i].y, quizRoomVectors[i].z);
+            Quaternion rotRoom = Quaternion.Euler(0, quizRoomVectors[i].w, 0);
             GameObject roomPillar = Instantiate(teleportPillarPrefab, posRoom, rotRoom);
             
             mazePillar.GetComponent<TeleportPillar>().setDeparture(mazePillar.transform.GetChild(0).transform.position);

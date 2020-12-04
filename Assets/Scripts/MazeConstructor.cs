@@ -99,7 +99,7 @@ public class MazeConstructor : MonoBehaviour
             }
             msg += "\n";
         }
-
+        Debug.Log("GUI!");
         GUI.Label(new Rect(20, 20, 500, 500), msg);
     }
 }

@@ -5,8 +5,9 @@ using UnityEngine;
 public class TeleportPillar : MonoBehaviour
 {
     // Vector pos for teleportable position {X, Y, Z, ViewingRotation}
-    private Vector4 depart = new Vector4(0f, 0f, 0f);
-    private Vector4 dest = new Vector4(0f, 0f, 0f);
+    private Vector4 depart = new Vector4(0f, 0f, 0f, 0f);
+    private Vector4 dest = new Vector4(0f, 0f, 0f, 0f);
+    private bool isInitialized = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,19 @@ public class TeleportPillar : MonoBehaviour
         
     }
 
+    public bool isValid()
+    {
+        return isInitialized;
+    }
     public void setDeparture(Vector4 pos)
     {
+        isInitialized = true;
         depart = pos;
     }
 
     public void setDestination(Vector4 pos)
     {
+        isInitialized = true;
         dest = pos;
     }
 }
