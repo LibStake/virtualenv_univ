@@ -10,8 +10,6 @@ public class MazeConstructor : MonoBehaviour
     private MazeMeshGenerator _meshGenerator;
 
     [SerializeField] private int numQuizRoom;
-    [SerializeField] private float mazeCellWidth;
-    [SerializeField] private float mazeCellHeight;
     [SerializeField] private Material mazeMat1;
     [SerializeField] private Material mazeMat2;
     [SerializeField] private Material startMat;
@@ -25,8 +23,6 @@ public class MazeConstructor : MonoBehaviour
 
     private void Awake()
     {
-        _meshGenerator = new MazeMeshGenerator(mazeCellWidth, mazeCellHeight);
-        _dataGenerator = new MazeDataGenerator();
         Data = new int[,]
         {
             {0, 0, 0},
@@ -35,8 +31,11 @@ public class MazeConstructor : MonoBehaviour
         };
     }
 
-    public void GenerateNewMaze(int sizeRows, int sizeCols)
+    public void GenerateNewMaze(int sizeRows, int sizeCols, float mazeCellWidth, float mazeCellHeight)
     {
+        _meshGenerator = new MazeMeshGenerator(mazeCellWidth, mazeCellHeight);
+        _dataGenerator = new MazeDataGenerator();
+        
         if (sizeRows % 2 == 0 && sizeCols % 2 == 0)
         {
             Debug.LogError("Odd numbers work better for maze generation.");

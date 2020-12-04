@@ -4,11 +4,20 @@
 
 public class GameController : MonoBehaviour
 {
-    private MazeConstructor Generator;
+    [SerializeField] private int sizeRows;
+    [SerializeField] private int sizeCols;
+    [SerializeField] private float mazeCellWidth;
+    [SerializeField] private float mazeCellHeight;
+    private MazeConstructor MazeGenerator;
+    private TeleportGenerator TeleportGenerator;
     // Start is called before the first frame update
     void Start()
     {
-        Generator = GetComponent<MazeConstructor>();
-        Generator.GenerateNewMaze(13, 15);
+        MazeGenerator = GetComponent<MazeConstructor>();
+        MazeGenerator.GenerateNewMaze(sizeRows, sizeCols, mazeCellWidth, mazeCellHeight);
+
+        TeleportGenerator = GetComponent<TeleportGenerator>();
+        TeleportGenerator.CreateMazeTeleportSpot(MazeGenerator.Data, sizeRows, sizeCols, mazeCellWidth, mazeCellHeight);
+
     }
 }
