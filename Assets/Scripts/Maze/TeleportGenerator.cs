@@ -74,6 +74,7 @@ public class TeleportGenerator : MonoBehaviour
                     else if (maze[i, j] == 5)
                     {
                         // Exit
+                        // GameObject gen = Instantiate(teleportPillarPrefab, pos, Quaternion.Euler(0, rot, 0));
                         
                     }
                     
