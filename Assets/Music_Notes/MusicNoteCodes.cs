@@ -24,6 +24,8 @@ public class MusicNoteCodes : MonoBehaviour
     public AudioSource B_Note;
     public AudioSource C1_Note;
     public AudioSource Twinkle_Note;
+    public AudioSource Correct_Note;
+    public AudioSource Wrong_Note;
 
     public void C_Note_Play()
     {
@@ -61,4 +63,13 @@ public class MusicNoteCodes : MonoBehaviour
     {
         Twinkle_Note.Play();
     }
+    public void Correct_Note_Play()
+    {
+        Correct_Note.Play();
+    }
+    public void Wrong_Note_Play()
+    {
+        Wrong_Note.Play();
+    }
+
 }
