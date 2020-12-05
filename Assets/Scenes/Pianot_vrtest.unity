@@ -1529,6 +1529,10 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3348238866624119504, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4991626068243528273, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Wrong_Note_Play
@@ -1606,8 +1610,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8727315243174540907, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727315243174540907, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Correct_Note_Play
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727315243174540907, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MusicNoteCodes, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727315243174540907, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727315243174540907, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727315243174540907, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727315243174540907, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82f73ba312ce2d34987b2ace9b7e381c, type: 3}

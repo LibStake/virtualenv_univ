@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ThrowBall2.unity
     guid: 5f01d9a0ba486f745890a1af6a714feb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Pianot_vrtest.unity
     guid: 9f1a88eae0544604d9a1392de9635ff8
+  - enabled: 0
+    path: Assets/Scenes/Tower_vrtest.unity
+    guid: c39780a45c7f1544cb5e4ab513e8fef5
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1726f3551a909e747bbb6f55eae1eb31, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2e485a299037c114f917c85f96b2b238, type: 2}
