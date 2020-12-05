@@ -12,8 +12,7 @@ public class MazeConstructor : MonoBehaviour
     [SerializeField] private int numQuizRoom;
     [SerializeField] private Material mazeMat1;
     [SerializeField] private Material mazeMat2;
-    [SerializeField] private Material startMat;
-    [SerializeField] private Material treasureMat;
+    [SerializeField] private List<GameObject> quizRoomPillars;
 
     public int[,] Data
     {
@@ -42,6 +41,7 @@ public class MazeConstructor : MonoBehaviour
         }
 
         Data = _dataGenerator.FromDimensions(sizeRows, sizeCols, numQuizRoom + 1);
+        
         DisplayMaze();
     }
 
@@ -61,7 +61,7 @@ public class MazeConstructor : MonoBehaviour
         MeshRenderer mr = go.AddComponent<MeshRenderer>();
         mr.materials = new Material[2] {mazeMat1, mazeMat2};
     }
-    
+
     private void OnGUI()
     {
         if (!showDebug) return;
