@@ -12,7 +12,6 @@ public class MazeConstructor : MonoBehaviour
     [SerializeField] private int numQuizRoom;
     [SerializeField] private Material mazeMat1;
     [SerializeField] private Material mazeMat2;
-    [SerializeField] private List<GameObject> quizRoomPillars;
 
     public int[,] Data
     {
@@ -34,7 +33,7 @@ public class MazeConstructor : MonoBehaviour
     {
         _meshGenerator = new MazeMeshGenerator(mazeCellWidth, mazeCellHeight);
         _dataGenerator = new MazeDataGenerator();
-        
+
         if (sizeRows % 2 == 0 && sizeCols % 2 == 0)
         {
             Debug.LogError("Odd numbers work better for maze generation.");
@@ -99,7 +98,6 @@ public class MazeConstructor : MonoBehaviour
             }
             msg += "\n";
         }
-        Debug.Log("GUI!");
         GUI.Label(new Rect(20, 20, 500, 500), msg);
     }
 }

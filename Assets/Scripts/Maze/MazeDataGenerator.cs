@@ -56,7 +56,7 @@ public class MazeDataGenerator
         }
         catch (InvalidDataException e)
         {
-            Debug.Log("Fail to fulfill room spot min");
+            Debug.Log("+=+= Regen Map =+=+");
             markedMaze = FromDimensions(sizeRows, sizeCols, numSpots);
         }
         return markedMaze;

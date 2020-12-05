@@ -7,7 +7,7 @@ public class TeleportPillar : MonoBehaviour
 {
     // Vector pos for teleportable position {X, Y, Z, ViewingRotation}
     public Transform dest;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +20,12 @@ public class TeleportPillar : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.gameObject.transform.CompareTag("Player"))
         {
-            other.transform.position = dest.GetComponent("ExitPos").transform.position;
-            other.transform.rotation = dest.GetComponent("ExitPos").transform.rotation;
+            Debug.Log("Teleport TO " + dest.position.x + ", " + dest.position.y + ", " + dest.position.z + "R : " + dest.rotation.y);
+            other.transform.SetPositionAndRotation(dest.position, dest.rotation);
         }
     }
 }

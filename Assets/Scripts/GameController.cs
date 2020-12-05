@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-
-    private int status = 0;
     
     [SerializeField] private int sizeRows;
     [SerializeField] private int sizeCols;
@@ -17,12 +15,14 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("+=+= Gen Map =+=+");
         MazeGenerator = GetComponent<MazeConstructor>();
         MazeGenerator.GenerateNewMaze(sizeRows, sizeCols, mazeCellWidth, mazeCellHeight);
-
+        Debug.Log("+=+= Regen Map Finished =+=+");
+        
+        Debug.Log("+=+= Gen Teleport =+=+");
         TeleportGenerator = GetComponent<TeleportGenerator>();
         TeleportGenerator.CreateMazeTeleportSpot(MazeGenerator.Data, mazeCellWidth);
-
-        
+        Debug.Log("+=+= Gen Teleport Finished =+=+");
     }
 }
