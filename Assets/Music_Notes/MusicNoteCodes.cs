@@ -66,6 +66,7 @@ public class MusicNoteCodes : MonoBehaviour
     public void Correct_Note_Play()
     {
         Correct_Note.Play();
+        GameObject.Find("Controller").GetComponent<GameMaster>().setQuizClear();
     }
     public void Wrong_Note_Play()
     {
