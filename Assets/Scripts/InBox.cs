@@ -25,6 +25,7 @@ public class InBox : MonoBehaviour
             count++;
             bcText.text = count.ToString();
             if (count == 3) {
+                GameObject.Find("Controller").GetComponent<GameMaster>().setQuizClear();
                 clCanvas.SetActive(true);
             }
         }
