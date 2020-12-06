@@ -70,6 +70,7 @@ public class MazeDataGenerator
         // Surrounded : 2
         // Entrance   : 3
         // QuizRoom   : 4
+        // MazeExit   : 5
         // Get Chamber candidate
         Debug.Log("Generate Marked Maze.");
         int rMax = maze.GetUpperBound(0);
@@ -95,11 +96,11 @@ public class MazeDataGenerator
         if (surroundingIndice.Count < minimumSurroundings || surroundingIndice.Count < numSpots)
             throw new InvalidDataException("Minimum surrounding spot not fulfilled.");
 
-        // Make maze have numSpot-1 room spot & 1 entrance spot
+        // Make maze have numSpot-2 room spot & 1 entrance spot
         for (int i = 0; i < numSpots; i++)
         {
             int[] pop = popRandom(ref surroundingIndice);
-            maze[pop[0], pop[1]] = (i == 0) ? 3 : 4;
+            maze[pop[0], pop[1]] = (i == 0) ? 3 : ((i == 1) ? 5 : 4);
         }
 
         return maze;

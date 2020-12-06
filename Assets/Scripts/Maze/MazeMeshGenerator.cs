@@ -84,6 +84,7 @@ public class MazeMeshGenerator
                             new Vector3(Width, Height, 1)
                         ), ref newVertices, ref newUVs, ref wallTriangles);
                     }
+                    
                 }
                 else
                 {

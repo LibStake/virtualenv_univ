@@ -39,7 +39,7 @@ public class MazeConstructor : MonoBehaviour
             Debug.LogError("Odd numbers work better for maze generation.");
         }
 
-        Data = _dataGenerator.FromDimensions(sizeRows, sizeCols, numQuizRoom + 1);
+        Data = _dataGenerator.FromDimensions(sizeRows, sizeCols, numQuizRoom + 2);
         
         DisplayMaze();
     }
@@ -85,11 +85,15 @@ public class MazeConstructor : MonoBehaviour
                 }
                 else if (maze[i, j] == 3)
                 {
-                    msg += "++";
+                    msg += "in";
                 }
                 else if (maze[i, j] == 4)
                 {
                     msg += "[  ]";
+                }
+                else if (maze[i, j] == 5)
+                {
+                    msg += "ou";
                 }
                 else
                 {

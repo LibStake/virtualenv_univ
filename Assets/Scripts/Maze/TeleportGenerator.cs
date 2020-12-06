@@ -12,7 +12,8 @@ using Vector4 = UnityEngine.Vector4;
 public class TeleportGenerator : MonoBehaviour
 {
     public bool showDebug;
-    public GameObject marker;
+    public GameObject mazeEnterMarker;
+    public GameObject mazeExitMarker;
     public GameObject teleportPillarPrefab;
     public List<GameObject> quizRoomEntrances;
     public TeleportGenerator()
@@ -44,7 +45,7 @@ public class TeleportGenerator : MonoBehaviour
                     {
                         Debug.Log("-- Entrance TP --");
                         // Ent
-                        GameObject gen = Instantiate(marker, pos, Quaternion.Euler(0, rot, 0));
+                        GameObject gen = Instantiate(mazeEnterMarker, pos, Quaternion.Euler(0, rot, 0));
                         GameObject.Find("TeleportPillar_StartRoom").transform.GetChild(1).GetComponent<TeleportPillar>().dest = gen.transform;
                         Debug.Log("Entrance Created to " + pos.x + "," + pos.y + "," + pos.z);
                         Debug.Log("-- Entrance TP Finished --");
@@ -74,8 +75,11 @@ public class TeleportGenerator : MonoBehaviour
                     else if (maze[i, j] == 5)
                     {
                         // Exit
-                        // GameObject gen = Instantiate(teleportPillarPrefab, pos, Quaternion.Euler(0, rot, 0));
-                        
+                        GameObject gen = Instantiate(teleportPillarPrefab, pos, Quaternion.Euler(0, rot, 0));
+                        gen.transform.GetChild(1).GetComponent<TeleportPillar>().dest = mazeExitMarker.transform;
+                        gen.transform.GetChild(1).GetComponent<TeleportPillar>().disabled = true;
+                        gen.transform.GetChild(3).GetComponent<Light>().color = Color.yellow;
+                        gen.transform.GetChild(3).GetComponent<Light>().intensity = 10;
                     }
                     
                 }
