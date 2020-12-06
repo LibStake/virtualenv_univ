@@ -43,7 +43,7 @@ public class TeleportPillar : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (disabled) return;
-        if (dest == null) return;
+        // if (dest == null) return;
         
         if (other.gameObject.transform.CompareTag("Player"))
         {

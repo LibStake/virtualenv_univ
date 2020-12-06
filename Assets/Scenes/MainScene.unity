@@ -3329,6 +3329,11 @@ Transform:
   m_Father: {fileID: 2023612940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1129365008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1956727551538382427, guid: 64ab39025a54b6747b44514bfb57de3c, type: 3}
+  m_PrefabInstance: {fileID: 1950823984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1130664903
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,7 +6371,7 @@ RectTransform:
   m_Children:
   - {fileID: 1562512375}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6484,7 +6489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showDebug: 0
-  marker: {fileID: 852127479254626986, guid: d67caf82861f4624d935c2baee9274af, type: 3}
+  mazeEnterMarker: {fileID: 852127479254626986, guid: d67caf82861f4624d935c2baee9274af, type: 3}
+  mazeExitMarker: {fileID: 1129365008}
   teleportPillarPrefab: {fileID: 5021122753593042808, guid: 7cd71e2ce63d9434f93873c43b3a4a2c, type: 3}
   quizRoomEntrances:
   - {fileID: 1756609057}
@@ -6502,6 +6508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a413d0a07430ff14e8d8b8e50fc824ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statusText: {fileID: 1562512374}
   numToClearGame: 3
 --- !u!1 &2001101746
 GameObject:
