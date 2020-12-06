@@ -5,6 +5,11 @@ using UnityEngine;
 public class Towerclear : MonoBehaviour
 {
     public GameObject capsule;
+
+    void Awake() {
+        capsule.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
