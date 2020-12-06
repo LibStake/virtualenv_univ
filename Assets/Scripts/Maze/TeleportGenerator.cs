@@ -76,6 +76,7 @@ public class TeleportGenerator : MonoBehaviour
                     {
                         // Exit
                         GameObject gen = Instantiate(teleportPillarPrefab, pos, Quaternion.Euler(0, rot, 0));
+                        gen.name = "GameClearPortal";
                         gen.transform.GetChild(1).GetComponent<TeleportPillar>().dest = mazeExitMarker.transform;
                         gen.transform.GetChild(1).GetComponent<TeleportPillar>().disabled = true;
                         gen.transform.GetChild(3).GetComponent<Light>().color = Color.yellow;
